@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "310385159604",
+    "project_id": "registrojambox",
+    "storage_bucket": "registrojambox.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310385159604:android:59410613f439531b5d16e1",
+        "android_client_info": {
+          "package_name": "com.yonjar.newjambox"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDLR12j7zhJIeFC0W5uJAzMCxueWvKHTE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroYlogin.Inicio"
+    >
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/iniciobg" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#83000000" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/imagologojb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.8"
+        android:orientation="horizontal"
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="@dimen/_240sdp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline"
+        android:background="@drawable/rounded"
+        android:fontFamily="@font/chillax_bold"
+     android:padding="@dimen/_16sdp"
+        android:text="Iniciar Sesión"
+        android:textColor="#ffffff"
+        android:theme="@style/btnLogin" />
+
+    <TextView
+        android:id="@+id/txtinicio1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/chillax_bold"
+        android:text="¿No tienes una cuenta?"
+        android:textColor="#fff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/txtRegistrate"
+        android:layout_marginVertical="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_40sdp"
+        app:layout_constraintHorizontal_chainStyle="spread" />
+
+    <TextView
+        android:id="@+id/txtRegistrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/chillax_bold"
+        android:text="Regístrate"
+        android:textColor="@color/redJB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtinicio1"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        android:layout_marginVertical="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_45sdp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_200sdp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="#eeeeee"
+    android:padding="@dimen/_10sdp"
+
+    >
+    <EditText
+        android:id="@+id/etArtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de usuario"
+        android:textAlignment="center"
+        android:theme="@style/editText"
+        android:maxLines="5"
+        android:textColor="#000"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:maxLength="30"
+        />
+    <EditText
+        android:id="@+id/etDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nueva Descripción"
+        android:textAlignment="center"
+        android:theme="@style/editText"
+        android:maxLines="5"
+        android:textColor="#000"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:maxLength="150"
+        />
+
+    <Button
+        android:id="@+id/btnAceptarDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Aceptar"
+        android:background="@drawable/rounded"
+        />
+    <Button
+        android:id="@+id/btnCancelDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Cancelar"
+        android:background="@drawable/rounded"
+        />
+</LinearLayout>
