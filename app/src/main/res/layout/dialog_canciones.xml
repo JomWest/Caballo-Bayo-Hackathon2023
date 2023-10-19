@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_240sdp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="#effeff"
+    android:padding="@dimen/_10sdp"
+    >
+    <ImageView
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_gravity="center"
+        android:src="@drawable/defaultjbprofile"
+        android:layout_marginVertical="@dimen/_20sdp"
+        />
+    <EditText
+        android:id="@+id/etCancNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de la canción"
+        android:textAlignment="center"
+        style="@style/editText"
+        android:singleLine="true"
+        android:textColor="#000"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:maxLength="20"
+
+        />
+    <TextView
+        android:id="@+id/tvAudio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Audio de la canción"
+        android:layout_gravity="center"
+        android:textSize="@dimen/_12ssp"
+        />
+
+    <Button
+        android:id="@+id/btnSubirAudio"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Subir audio"
+        android:background="@drawable/rounded"
+        />
+
+    <Button
+        android:id="@+id/btnAceptarCanc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Aceptar"
+        android:background="@drawable/rounded"
+        />
+    <Button
+        android:id="@+id/btnCancelCanc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Cancelar"
+        android:background="@drawable/rounded"
+        />
+</LinearLayout>

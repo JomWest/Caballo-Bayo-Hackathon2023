@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchFragment"
+    android:background="#000"
+    >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_20ssp"
+    >
+
+
+    <EditText
+        android:id="@+id/edBuscar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="¿Qué quieres buscar?"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/rounded"
+        android:padding="@dimen/_5ssp"
+        android:fontFamily="@font/chillax_regular"
+        android:backgroundTint="#fff"
+        android:maxLines="1"
+        />
+
+    <ImageView
+        android:id="@+id/ivBuscar"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:src="@drawable/buscar"
+        app:layout_constraintBottom_toBottomOf="@+id/edBuscar"
+        app:layout_constraintStart_toStartOf="@+id/edBuscar"
+        app:layout_constraintTop_toTopOf="@+id/edBuscar"
+        app:tint="#000"
+        android:layout_marginStart="@dimen/_5sdp"
+        />
+
+    <TextView
+        android:id="@+id/tvBuscarJB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Buscar Jambox"
+        android:textSize="@dimen/_20ssp"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/chillax_bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Encuentra artistas, álbumes y playlist"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="#fff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBuscarJB"
+        android:fontFamily="@font/chillax_regular"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

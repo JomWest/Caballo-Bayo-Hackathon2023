@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileFragment"
+    android:background="#000000"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_10sdp"
+        >
+
+        <ImageView
+            android:id="@+id/ivCompartir"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/compartir"
+            app:layout_constraintBottom_toTopOf="@+id/guideline1"
+            app:layout_constraintStart_toEndOf="@+id/IVprofile"
+            app:layout_constraintTop_toBottomOf="@+id/tvAmigos"
+            app:tint="#fff" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/IVprofile"
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="@dimen/_110sdp"
+            android:scaleType="centerInside"
+            android:src="@drawable/eminem"
+            app:layout_constraintBottom_toTopOf="@+id/TVDescripcion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedImageViewRounded" />
+
+        <TextView
+            android:id="@+id/TVprofileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/chillax_bold"
+            android:text="Nombre del artista"
+            android:textColor="#fff"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.188"
+            app:layout_constraintStart_toEndOf="@+id/IVprofile"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.355" />
+
+        <TextView
+            android:id="@+id/tvAmigos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/chillax_regular"
+            android:text="Amigos"
+            android:textColor="#fff"
+            app:layout_constraintHorizontal_bias="0.07"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/IVprofile"
+            app:layout_constraintTop_toBottomOf="@+id/TVprofileName" />
+        <TextView
+            android:id="@+id/tvNAmigos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/chillax_regular"
+            android:text="N°"
+            android:textColor="#fff"
+            app:layout_constraintHorizontal_bias="0.07"
+            app:layout_constraintEnd_toEndOf="@+id/btnEditar"
+            app:layout_constraintStart_toEndOf="@+id/tvAmigos"
+            app:layout_constraintTop_toBottomOf="@+id/TVprofileName" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent=".18"
+            android:orientation="horizontal"
+
+            />
+
+        <TextView
+            android:id="@+id/btnEditar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/chillax_bold"
+            android:text="Editar perfil"
+            android:textColor="#fff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.7"
+            app:layout_constraintStart_toEndOf="@+id/tvAmigos"
+            app:layout_constraintTop_toBottomOf="@+id/TVprofileName" />
+
+
+        <TextView
+            android:id="@+id/TVDescripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10ssp"
+            android:fontFamily="@font/chillax_bold"
+            android:text="Descripción"
+            android:textColor="#fff"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/TVSiguiendo"
+            app:layout_constraintTop_toTopOf="@+id/guideline1"
+            android:layout_marginVertical="@dimen/_5sdp"
+            />
+
+        <TextView
+            android:id="@+id/TVSiguiendo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10ssp"
+            android:fontFamily="@font/chillax_bold"
+            android:text="Siguiendo"
+            android:textColor="#fff"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TVDescripcion"
+ />
+
+        <TextView
+            android:id="@+id/TVPlaylist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10ssp"
+            android:fontFamily="@font/chillax_bold"
+            android:text="Playlists"
+            android:textColor="#fff"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TVSiguiendo"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnAgregarCanc"
+            android:layout_width="@dimen/_37sdp"
+            android:layout_height="@dimen/_38sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/agregar"
+            android:scaleType="centerInside"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
