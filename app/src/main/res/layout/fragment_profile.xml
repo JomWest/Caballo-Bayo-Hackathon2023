@@ -28,7 +28,7 @@
             android:id="@+id/IVprofile"
             android:layout_width="@dimen/_110sdp"
             android:layout_height="@dimen/_110sdp"
-            android:scaleType="centerInside"
+            android:scaleType="fitXY"
             android:src="@drawable/eminem"
             app:layout_constraintBottom_toTopOf="@+id/TVDescripcion"
             app:layout_constraintStart_toStartOf="parent"
@@ -140,12 +140,13 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnAgregarCanc"
-            android:layout_width="@dimen/_37sdp"
+            android:layout_width="@dimen/_38sdp"
             android:layout_height="@dimen/_38sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:src="@drawable/agregar"
-            android:scaleType="centerInside"
+            android:scaleType="fitXY"
+
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

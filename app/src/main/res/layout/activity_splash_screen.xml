@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".splashScreen">
+    tools:context=".splashScreen"
+    android:background="#fff"
+    >
 
     <ImageView
-        android:layout_width="@dimen/_250sdp"
-        android:layout_height="@dimen/_250sdp"
-        android:src="@drawable/logojb"
+        android:layout_width="@dimen/_275sdp"
+        android:layout_height="@dimen/_275sdp"
+        android:src="@drawable/iconjb"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
