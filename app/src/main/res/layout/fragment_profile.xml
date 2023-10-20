@@ -125,6 +125,14 @@
             app:layout_constraintTop_toBottomOf="@+id/TVDescripcion"
  />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSiguiendo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TVSiguiendo" />
+
         <TextView
             android:id="@+id/TVPlaylist"
             android:layout_width="wrap_content"
@@ -135,19 +143,26 @@
             android:textColor="#fff"
             android:textSize="@dimen/_20ssp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/TVSiguiendo"
+            app:layout_constraintTop_toBottomOf="@+id/rvSiguiendo"
             />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPlaylist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TVPlaylist" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnAgregarCanc"
-            android:layout_width="@dimen/_38sdp"
-            android:layout_height="@dimen/_38sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.5"
             android:src="@drawable/agregar"
             android:scaleType="fitXY"
-
-            />
+        />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

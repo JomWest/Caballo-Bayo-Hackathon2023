@@ -1,10 +1,15 @@
 package com.yonjar.njambox
 
+import android.app.Activity
 import android.app.Dialog
-import android.media.Image
+import android.content.ContentResolver
+import android.content.Intent
+import android.database.Cursor
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
+import android.provider.OpenableColumns
 import android.text.Editable
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,17 +18,15 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.fragment.app.Fragment
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.FirebaseStorage
 import com.squareup.picasso.Picasso
-import com.yonjar.njambox.Classes.Usuarios
+
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -52,16 +55,24 @@ class ProfileFragment : Fragment() {
     private lateinit var etDescripcion: EditText
     private lateinit var ivProfile: ImageView
 
-
-
     private var emailActual:String? =  null
     private var userActual:String? = null
     private var userIdActual:String? = null
     private var profileImage:String? = null
     private var descripcion:String? = null
 
+    val REQUEST_AUDIO_FILE = 1
+
+
     private lateinit var database: FirebaseDatabase
 
+    val pickMediaCover = registerForActivityResult(ActivityResultContracts.PickVisualMedia()){uri ->
+        if(uri != null){
+            ivCover.setImageURI(uri)
+        }else{
+
+        }
+    }
 
     private val pickMedia = registerForActivityResult(ActivityResultContracts.PickVisualMedia()){
             uri -> if(uri!=null){
@@ -91,6 +102,7 @@ class ProfileFragment : Fragment() {
         }
     }
     else{
+        Toast.makeText(requireContext(),"Actualización cancelada",Toast.LENGTH_SHORT).show()
     }
     }
 
@@ -182,6 +194,8 @@ class ProfileFragment : Fragment() {
         etDescripcion = dialog.findViewById(R.id.etDescripcion)
 
 
+
+
         if (userActual != null){
             val editableNombre = Editable.Factory.getInstance().newEditable(userActual)
             etArtName.text = editableNombre
@@ -238,9 +252,18 @@ class ProfileFragment : Fragment() {
         btnSubirAudio = dialog.findViewById(R.id.btnSubirAudio)
         tvAudio = dialog.findViewById(R.id.tvAudio)
         etNombreCanc = dialog.findViewById(R.id.etCancNombre)
+        ivCover = dialog.findViewById(R.id.ivCover)
 
         dialog.setCancelable(false)
         dialog.setCanceledOnTouchOutside(false)
+
+
+
+
+        ivCover.setOnClickListener {
+
+            pickMediaCover.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+        }
 
         btnAceptarCanc.setOnClickListener {
             if (etNombreCanc.text.toString().isEmpty()) {
@@ -256,11 +279,30 @@ class ProfileFragment : Fragment() {
         }
 
         btnSubirAudio.setOnClickListener {
-
+            selectAudioFile(requireActivity())
         }
 
         dialog.show()
     }
 
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == REQUEST_AUDIO_FILE && resultCode == Activity.RESULT_OK) {
+            val audioUri: Uri? = data?.data
+        }
+    }
+
+    fun selectAudioFile(activity: Activity) {
+        val intent = Intent(Intent.ACTION_GET_CONTENT).apply {
+            type = "audio/*"
+        }
+
+        activity.startActivityForResult(intent, REQUEST_AUDIO_FILE)
+    }
+
+
 }
+
+
